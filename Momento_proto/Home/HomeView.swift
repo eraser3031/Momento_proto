@@ -54,12 +54,14 @@ struct HomeView: View {
                 }
                 .padding()
                 .background(.white, in: .capsule)
+                .compositingGroup()
                 .shadow(radius: 1)
                 .padding()
             }
 
         }
         .sheet(isPresented: $showAddSheet) {
+            AddWisdomView()
         }
     }
     
@@ -154,6 +156,7 @@ struct WisdomCardView: View {
         .frame(maxWidth: .infinity)
         .padding()
         .background(.background, in: .rect(cornerRadius: 12))
+        .compositingGroup()
         .shadow(radius: 1)
     }
 }
